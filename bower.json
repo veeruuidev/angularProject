@@ -1,0 +1,20 @@
+{
+  "name": "angularjsProject",
+  "homepage": "https://github.com/veeruuidev/angularProject",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8"
+  },
+  
+  }
+}
