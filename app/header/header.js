@@ -10,7 +10,7 @@
     
     angular.module("header")
     .run(function(){
-        console.log("i am the header run functin");
+        console.log("i am the header run function");
     });
     
     
