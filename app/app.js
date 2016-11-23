@@ -1,12 +1,12 @@
 (function () {
 
-    angular.module("blogFest", ["header"]);
+    angular.module("blogFest", ["header","blog"]);
 
     angular.module("blogFest")
-        .config(function () {
-            console.log("i am the blogFest module");
-        });
-
+       .config(function() {
+        console.log(" i am blogfest config function")
+        
+    })
 
     angular.module("blogFest")
         .run(function () {
