@@ -13,7 +13,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
 
-                <li ng-repeat="item in navItems"><a href="#">{{item}}</a></li>
+                <li ng-repeat="item in navItems" ng-click>
+            <a  ui-sref="{{item}}">{{item}}</a></li>
 
             </ul>
 
@@ -22,6 +23,8 @@
         <li><a href="#">{{item}}</a></li>
       </ul>
 -->
+            
+            
         </div>
     </div>
 </nav>
