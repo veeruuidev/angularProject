@@ -1,0 +1,34 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8">
+            <input type="search" class="form-control" ng-model="searchProduct" placeholder="Search">
+
+        </div>
+        <div class="col-md-4">
+
+            <input class="btn button" type="button" ng-click="search()" value="search">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" ng-repeat="product in products" style="margin:10px; background-color:#3c3c3c;">
+            <div class="media" style="padding:10px;">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="{{product.thumbnailImage}}" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading" ng-bind="product.name">{{name}}</h4>
+                    <h3 class="media-heading" ng-bind="product.salePrice">{{salePrice |currency:"&#x20b9;"}}</h3>
+                    <p ng-bind="product.shortDescription | limitTo:200">{{shortDescription}}</p>
+
+                    <button ng-click="addProductToCart(product)" class="btn btn-primary">Add To Cart </button>
+                    <button class="btn btn-warning" ng-click="removeProductToCart(product)">Remove From Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,5 +1,5 @@
-(function(){
-    
-    angular.module("blog",[]);
-    
-})();
+(
+ function(){
+     angular.module("blog",[]);
+ }
+)();

@@ -1,0 +1,65 @@
+<h3>User Details</h3>
+<div class="row" style="margin-bottom:5px;">
+    <div class="col-md-2">
+        <button class="btn button btn-danger" ng-click="showLess()">show less</button>
+    </div>
+    <div class="col-md-4">
+        <input type="search" class="form-control" ng-model="search" placeholder="Search List">
+    </div>
+    <div class="col-md-4">
+        <input type="text" class="form-control" ng-model="countryCode" placeholder="Country Code">
+    </div>
+
+
+
+    <div class="col-md-2">
+        <button class="btn button btn-danger" style="float:right" ng-click="showMore()">show more</button>
+    </div>
+
+
+
+</div>
+
+<div class="bs-example">
+    <table class="table table-hover" at-table at-paginated at-list="list" at-config="config">
+        <thead>
+            <tr>
+                <th ng-click="sort(s.No)">S.No
+
+                </th>
+                <th ng-click="sort(Name)">Name
+
+                </th>
+                <th ng-click="sort(Company)">Company
+
+                </th>
+                <th ng-click="sort(Email)">Email
+
+                </th>
+                <th ng-click="sort(Age)">Age
+
+                </th>
+                <th ng-click="sort(phoneNumber)">Phone Number
+
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-click="add()" ng-repeat="userdata in users|limitTo:userCount |filter:search |orderBy:sortKey:reverse ">
+                <td>{{$index+1}}</td>
+                <td>{{userdata.name}}</td>
+                <td>{{userdata.company |lowercase}}</td>
+                <td>{{userdata.email}}</td>
+                <td>{{userdata.age}}</td>
+                <td>{{userdata.phoneNumber|PhoneFormatter:countryCode}}</td>
+                <td><button ng-click="editUser(userdata)" class="btn btn-danger">Edit</button></td>
+            </tr>
+
+        </tbody>
+
+        <div nb-details details="userEdit" heading="{{title}}" save-details=saveDetails()></div>
+
+
+    </table>
+</div>

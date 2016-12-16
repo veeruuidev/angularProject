@@ -1,10 +1,9 @@
 {
-  "name": "angularjsProject",
-  "homepage": "https://github.com/veeruuidev/angularProject",
+  "name": "blogger",
+  "homepage": "https://github.com/kiranuidev/AngularOCT7AM",
   "description": "",
   "main": "",
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,9 +13,8 @@
   ],
   "dependencies": {
     "angular": "angularjs#^1.5.8",
-    "jquery": "^3.1.1",
     "bootstrap": "^3.3.7",
-    "angular-route": "^1.5.8",
+    "font-awesome": "^4.7.0",
     "angular-ui-router": "^0.3.2"
   }
 }

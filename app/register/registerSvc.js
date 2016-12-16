@@ -1,6 +1,5 @@
-( function(){
-    
-     function registerSvc(){
+(function(){
+    function registerSvc(){
         this.registerUser=function(userInfo){
             console.log(userInfo);
         };

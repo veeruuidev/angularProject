@@ -1,20 +1,14 @@
 (function(){
     
-    
     angular.module("header",[]);
     
     angular.module("header")
-    .config(function(){
-       console.log("i am the header module"); 
-    });
+    .config([function(){
+        console.log("I am the header");
+    }])
+    .run([function(){
+        console.log("I am the run function of header");
+    }]);
     
-    angular.module("header")
-    .run(function(){
-        console.log("i am the header run function");
-    });
-    
-    
-
-            
     
 })();
